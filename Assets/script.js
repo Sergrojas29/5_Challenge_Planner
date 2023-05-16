@@ -23,9 +23,9 @@ $(function () {
   var today = dayjs()
 
   var testTime = dayjs().set('hour', 9).set('minute', 55)
-  $('#currentDay').text(testTime.format('MMMM DD YYYY'))
-  $('#currentTime').text(testTime.format('hh:mm a'))
-  $('#currentHour').text(testTime.format('H'))
+  $('#currentDay').text(today.format('MMMM DD YYYY'))
+  $('#currentTime').text(today.format('hh:mm a'))
+  $('#currentHour').text(today.format('H'))
 
 
 
@@ -61,7 +61,7 @@ $(function () {
   function setTimeColor() {
     var ScheduleArea = $('#ScheduleArea')
     for (let i = 0; i < ScheduleArea.children().length; i++) {
-      var HourChecker = Number(testTime.format('H'))
+      var HourChecker = Number(today.format('H'))
       var CheckHourId = Number(ScheduleArea.children(0).eq(i).attr('id'))
       if (HourChecker > CheckHourId) {
         ScheduleArea.children(0).eq(i).addClass('past')
