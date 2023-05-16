@@ -9,11 +9,23 @@ $('#currentTime').text(testTime.format('hh:mm a'))
 $('#currentHour').text(testTime.format('h'))
 
 
+var todoSave = {
+  8: 'Wake up',
+  9: ' get the schudule',
+  10: ' Wait to leave',
+  11: ' Wait to leave',
+  12: ' Wait to leave',
+  13: ' Wait to leave',
+  14: ' Wait to leave',
+  15: ' Wait to leave',
+  16: ' Wait to leave',
+  17: ' Wait to leave',
+  test18: 'ersere'
+
+}
 
 var ScheduleArea = $('#ScheduleArea')
 var SaveBtn = $('.saveBtn')
-
-
 
 
 function setTimeColor(){
@@ -36,17 +48,40 @@ setTimeColor()
 
 
 function Checkclick(event){
-  element = event.target
-  jqelement = $(event.target)
-  console.log(element)
-  console.log(jqelement)
-  var inputTest = jqelement.prev().val()
-  console.log(inputTest)
+  var hourSelecter = $(event.target)
+  var inputText = hourSelecter.prev()
+  var userText = inputText.val()
+  var timeEl = inputText.prev().attr('id')
+  todoSave[timeEl] = userText
 }
-
 SaveBtn.on('click', Checkclick )
 
 
+
+
+
+function test(){
+  
+  var objetSize = Object.keys(todoSave).length + 7
+  
+  for (let i = 8; i < objetSize; i++) {
+    // var selectNumber = 
+    // var selectedArea =  $('#'todoSave[i])
+    var numberthing = String( '#' + i)
+    // var selectEL = $(numberthing).children().eq(1).val()
+    var selectEL = $(numberthing)
+    var testareaEL = selectEL.children().eq(1)
+    testareaEL.text(todoSave[i])
+    
+
+    console.log(selectEL)
+    
+    
+  }
+  
+}
+
+console.log($('#8').children().next())
 // testColor()
 
 
