@@ -4,7 +4,7 @@
 
 ## WebApp
 
-https://sergrojas29.github.io/5_Challenge_Planner/
+https://sergrojas29.github.io/Work-Day-Scheduler/
 
 ## Your Task
 
@@ -44,7 +44,7 @@ THEN the saved events persist
 
 ![Planned RunDown](./Assets/Images/Planner%20Run%20down.png)
 
-The planned is simply. Just does what is asked. Didnt added anymore so as not to lose points. 
+The planned is simply. Just does what is asked. 
 
 - Uses Day.js API for live time and to change the visual elements. 
 - Stores what the user inputs by clicking the save button next to the corresponding element
